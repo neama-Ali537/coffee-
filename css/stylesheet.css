@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bgColor: rgba(42, 25, 19, 1);
+  --btnColor: rgba(137, 84, 64, 1);
+  --textColorSm: rgba(93, 57, 45, 1);
+  --textColorLg: rgba(62, 38, 29, 1);
+  --titleColorPink: rgba(193, 153, 139, 1);
+  --titleColorBron: rgba(137, 84, 64, 1);
+  --lightColor: rgba(255, 255, 255, 1);
+}
+
+.bg-brown {
+  background-color: var(--bgColor);
+}
+.textcolor {
+  color: var(--textColorLg);
+}
+.btn-color {
+  background-color: var(--btnColor);
+  color: var(--lightColor);
+}
+.pinkcolor {
+  color: var(--titleColorPink);
+}
+.brown {
+  color: var(--bgColor);
+}
+.textcolorsm {
+  color: var(--textColorSm);
+}
+/* nav bar */
+/* Default Styles for Navbar Links */
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(42, 25, 19, 1);
+}
+
+/* Styles for the Switch (Language) */
+.form-check.form-switch {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.form-check label {
+  margin: 0;
+}
+
+/* Styles for the icon */
+.icon {
+  display: none;
+}
+
+.form-check-input:checked {
+  border-color: var(--bgColor);
+  background-color: var(--lightColor);
+}
+/*  */
+.form-check-input {
+  appearance: none;
+
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--bgColor);
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Styles for the icon inside the navbar in larger screens (min-width: 992px) */
+@media screen and (min-width: 992px) {
+  .form-check.form-switch {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+}
+
+/* Styles for the navbar collapse when it is focused */
+.navbar-collapse:focus {
+  background-color: rgba(42, 25, 19, 1);
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+    background-color: var(--bgColor);
+    height: 90vh;
+  }
+
+  .form-check.form-switch {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./imgs/coffee-beans-with-props-making-coffee.png");
+  background-position: center center;
+  background-size: cover;
+}
+/* media for home page */
+@media screen and (max-width: 600px) {
+  #homePage .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("./imgs/coffee-beans-with-props-making-coffee.png");
+    background-color: transparent;
+  }
+
+  .container-fluid .media {
+    margin-top: 50px;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+
+  .container-fluid .media h2 {
+    font-size: 40px;
+    margin: 10px auto;
+  }
+
+  .container-fluid .media div {
+    margin: 0 auto;
+  }
+  .btn-icon {
+    font-size: 40px;
+  }
+}
+/* home page */
+/* page2 */
+
+#pageTow .img1 {
+  position: relative;
+  z-index: 2;
+}
+#pageTow .img2 {
+  position: absolute;
+
+  left: 10%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+@media screen and (max-width: 992px) {
+  .content {
+    margin: auto;
+  }
+  #pageTow .img1 {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  #pageTow .img2 {
+    width: 250px;
+    margin: auto;
+    position: absolute;
+    /* display: block; */
+    left: 10%;
+    top: 200px;
+  }
+}
+/* page2 */
+/* space bettwen page 2 and 3  */
+#section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#pageTow {
+  margin-bottom: 50px;
+}
+#img-sider {
+  margin-top: 50px;
+}
+/* img-sider  */
+.pinkcolor a {
+  text-decoration: none;
+}
+.pinkcolor a:hover {
+  text-decoration: underline;
+}
+.menu {
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid var(--titleColorPink);
+  color: var(--lightColor);
+}
+/* start img slider section */
+.img-container {
+  position: relative;
+}
+
+.overlay-img {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(180, 178, 178, 0.258);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 500px;
+  background-image: url(./imgs/Img5.png);
+  background-position: center center;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.img-box i {
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--lightColor);
+}
+.img-box i#close {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+}
+.content-page {
+  transition: opacity 0.3s ease-in-out;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: var(--bgColor);
+}
+@media screen and (max-width: 600px) {
+  .overlay-img .img-box .content-page {
+    text-align: center;
+  }
+  .overlay-img .img-box .content-page .menu {
+    width: 100%;
+  }
+}
+/* page best people */
+@media screen and (max-width: 992px) {
+  #best-people .photo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #best-people .photo img {
+    width: 70%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #best-people {
+    background-color: var(--lightColor);
+  }
+  #best-people h4 {
+    width: 300px;
+    color: var(--textColorLg);
+  }
+  #best-people .photo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #best-people .photo img {
+    width: 45%;
+    margin: 10px;
+    background-color: var(--lightColor);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+/* page best people */
+/* page hand photo */
+@media screen and (min-width: 1200px) {
+  #premium .row {
+    margin: auto;
+    width: 90%;
+    height: 260px;
+    background-color: var(--bgColor);
+  }
+  #premium .handphoto {
+    position: relative;
+    top: -50px;
+    left: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .row {
+    
+    text-align: center;
+    margin: auto;
+  }
+  #premium .handphoto {
+    position: static;
+  }
+}
+/* page hand photo */
+/* page branches */
+.location {
+  width: 150px;
+  background-color: var(--bgColor);
+  color: var(--lightColor);
+  margin-bottom: 50px;
+}
+/* page branches */
+
+/* form div */
+#form .icons {
+  display: flex;
+  align-items: center;
+}
+#form .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  gap: 5px;
+}
+
+.label,
+.value {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.label {
+  font-weight: bold;
+}
+/* footer */
+/* الأيقونات الدائرية في العمود الأول */
+footer .icon-circle {
+  background-color: white;
+
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+}
+.footer {
+  background-image: url(./imgs/unsplash_Y6O6PHJRQms.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+ul.list-unstyled li {
+  display: flex;
+  align-items: center;
+}
+ul.list-unstyled li i {
+  margin-right: 10px;
+}
+
+.contact-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.contact-block .icon {
+  font-size: 24px;
+  color: var(--lightColor);
+  margin-bottom: 5px;
+}
+.contact-block p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  #footer .list {
+    text-align: center;
+    margin-top: 10px;
+  }
+  #footer .order-2 {
+    order: 3;
+  }
+
+  #footer .order-3 {
+    order: 2;
+  }
+
+  .contact-block {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-block .icon {
+    font-size: 18px;
+  }
+}
+/*  */
